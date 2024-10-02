@@ -41,5 +41,5 @@ To run this project locally, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/atm-interface.git
+   git clone https://github.com/arpitsingh03/ATM-minor.git
    cd atm-interface
