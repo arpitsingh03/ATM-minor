@@ -43,10 +43,3 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/your-username/atm-interface.git
    cd atm-interface
-atm-interface/
-│
-├── index.html         # Main HTML file
-├── style.css          # Stylesheet for the ATM interface
-├── script.js          # JavaScript for handling ATM interactions
-├── README.md          # Project documentation
-└── assets/            # Images, icons, or additional resources
