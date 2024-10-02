@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url(assets/background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.atm-container {
+    background-color: rgba(30, 43, 55, 0.95);
+    width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+.atm-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.atm-header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.atm-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background-color: #f2f2f2;
+    color: #333;
+}
+.atm-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.atm-btn:hover {
+    background-color: #45a049;
+}
+.atm-options, .account-screen {
+    margin-top: 30px;
+}
+.option {
+    background-color: #1a72b4;
+    padding: 12px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.option:hover {
+    background-color: #13588d;
+}
+.atm-footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

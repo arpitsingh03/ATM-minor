@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="atm-container" id="loginScreen">
+    <div class="atm-header">
+        <h1>Welcome to the ATM</h1>
+        <p>Please enter your Customer Number and PIN</p>
+    </div>
+
+    <form id="loginForm">
+        <input type="text" class="atm-input" id="customerNumber" placeholder="Customer Number" required>
+        <input type="password" class="atm-input" id="pinNumber" placeholder="PIN Number" required>
+        <button type="submit" class="atm-btn">Login</button>
+    </form>
+
+    <div class="atm-footer">
+        <p>Thank you for using our ATM service</p>
+    </div>
+</div>
+
+<div class="atm-container" id="mainMenu" style="display: none;">
+    <div class="atm-header">
+        <h1>Select Account Type</h1>
+        <p>Choose an account to proceed</p>
+    </div>
+    <div class="atm-options">
+        <div class="option" onclick="redirectToAccount('checkings')">Checkings Account</div>
+        <div class="option" onclick="redirectToAccount('savings')">Savings Account</div>
+        <div class="option" onclick="exitATM()">Exit</div>
+    </div>
+</div>
+
+<!-- Checkings Account -->
+<div class="atm-container account-screen" id="checkingsScreen" style="display: none;">
+    <div class="atm-header">
+        <h1>Checkings Account</h1>
+        <p>Select an action</p>
+    </div>
+    <div class="account-options">
+        <div class="option" onclick="showBalance('checkings')">View Balance</div>
+        <div class="option" onclick="navigateTo('withdraw', 'checkings')">Withdraw</div>
+        <div class="option" onclick="navigateTo('deposit', 'checkings')">Deposit</div>
+        <div class="option" onclick="navigateTo('transfer', 'checkings')">Transfer</div>
+        <div class="option" onclick="goBackToMainMenu()">Go Back</div>
+    </div>
+</div>
+
+<!-- Savings Account -->
+<div class="atm-container account-screen" id="savingsScreen" style="display: none;">
+    <div class="atm-header">
+        <h1>Savings Account</h1>
+        <p>Select an action</p>
+    </div>
+    <div class="account-options">
+        <div class="option" onclick="showBalance('savings')">View Balance</div>
+        <div class="option" onclick="navigateTo('withdraw', 'savings')">Withdraw</div>
+        <div class="option" onclick="navigateTo('deposit', 'savings')">Deposit</div>
+        <div class="option" onclick="navigateTo('transfer', 'savings')">Transfer</div>
+        <div class="option" onclick="goBackToMainMenu()">Go Back</div>
+    </div>
+</div>
+
+<!-- Withdraw/Deposit/Transfer Screen -->
+<div class="atm-container account-screen" id="transactionScreen" style="display: none;">
+    <div class="atm-header">
+        <h1 id="transactionTitle">Transaction</h1>
+    </div>
+    <form id="transactionForm">
+        <input type="number" class="atm-input" id="transactionAmount" placeholder="Enter Amount" required>
+        <button type="submit" class="atm-btn">Submit</button>
+    </form>
+    <div class="option" onclick="goBackToAccount()">Go Back</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
